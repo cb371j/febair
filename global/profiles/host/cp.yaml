@@ -28,7 +28,7 @@ data:
           bootdrive: 'true'
         partitions:
           - name: 'root'
-            size: '30g'
+            size: '25g'
             bootable: true
             filesystem:
               mountpoint: '/'
