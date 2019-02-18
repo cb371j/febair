@@ -64,9 +64,9 @@ data:
       host_fqdn_override:
         default: null
         public:
-          host: iam.DOMAIN
+          host: keystone.DOMAIN
         admin:
-          host: iam.DOMAIN
+          host: keystone.DOMAIN
       path:
         default: /v3
       scheme:
@@ -582,9 +582,9 @@ data:
       host_fqdn_override:
         default: null
         public:
-          host: identity.DOMAIN
+          host: iam.DOMAIN
         admin:
-          host: identity.DOMAIN
+          host: iam.DOMAIN
       path:
         default: /v3
       scheme:
