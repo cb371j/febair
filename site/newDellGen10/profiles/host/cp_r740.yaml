@@ -70,7 +70,7 @@ data:
         labels:
           bootdrive: 'true'
         partitions:
-          - name: ''
+          - name: 'root'
             size: '25g'
             filesystem:
               mountpoint: '/'
