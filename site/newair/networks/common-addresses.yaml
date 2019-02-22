@@ -62,12 +62,12 @@ data:
     hostname: aknode105
     # NEWSITE-CHANGEME: Calico IP of the Genesis node. Use the "start" value for
     # the calico network defined in networks/physical/networks.yaml for this IP.
-    ip:172.29.14.105
+    ip: 172.29.14.105
 
   bootstrap:
     # NEWSITE-CHANGEME: Update with the "start" value/IP of the static range
     # defined for the pxe network in networks/physical/networks.yaml
-    ip:172.30.14.105
+    ip: 172.30.14.105
 
   kubernetes:
     # K8s API service IP
