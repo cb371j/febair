@@ -5,7 +5,7 @@ schema: 'drydock/Region/v1'
 metadata:
   schema: 'metadata/Document/v1'
   # NEWSITE-CHANGEME: Replace with the site name
-  name: newair
+  name: newak
   layeringDefinition:
     abstract: false
     layer: site
