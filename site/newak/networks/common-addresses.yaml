@@ -1,4 +1,42 @@
-domain. Do not change. This is internal to the cluster.
+---
+# The purpose of this file is to define network related paramters that are
+# referenced elsewhere in the manifests for this site.
+#
+# TODO: Include bare metal host FQDN naming standards
+# TODO: Include ingress FQDN naming standards
+schema: pegleg/CommonAddresses/v1
+metadata:
+  schema: metadata/Document/v1
+  name: common-addresses
+  layeringDefinition:
+    abstract: false
+    layer: site
+  storagePolicy: cleartext
+data:
+  calico:
+    # NEWSITE-CHANGEME: The interface that calico will use. Update if your
+    # logical bond interface name or calico VLAN have changed from the reference
+    # site design.
+    # This should be whichever
+    # bond and VLAN number specified in networks/physical/networks.yaml for the Calico
+    # network. E.g. VLAN 22 for the calico network as a member of bond0, you
+    # would set "interface=bond0.44" as shown here.
+    ip_autodetection_method: interface=bond0.44
+    etcd:
+      # etcd service IP address
+      service_ip: 10.96.232.136
+
+    ip_rule:
+      gateway: 172.29.14.1
+    bgp:
+      ipv4:
+        public_service_cidr: 172.29.9.160/29
+        ingress_vip: 172.29.9.161/32
+        peers:
+          - 172.29.14.2
+          - 172.29.14.3
+  dns:
+    # Kubernetes cluster domain. Do not change. This is internal to the cluster.
     cluster_domain: cluster.local
     # DNS service ip
     service_ip: 10.96.0.10
