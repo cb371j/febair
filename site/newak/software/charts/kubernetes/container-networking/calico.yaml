@@ -12,7 +12,6 @@ metadata:
     actions:
       - method: merge
         path: .
-
   substitutions:
     - src:
         schema: pegleg/CommonAddresses/v1
@@ -27,6 +26,12 @@ metadata:
         path: .calico.bgp.ipv4.peers[0]
       dest:
         path: .values.networking.bgp.ipv4.peers[0].spec.peerIP
+    - src:
+        schema: pegleg/CommonAddresses/v1
+        name: common-addresses
+        path: .calico.bgp.ipv4.peers[1]
+      dest:
+        path: .values.networking.bgp.ipv4.peers[1].spec.peerIP
 
   storagePolicy: cleartext
 data:
