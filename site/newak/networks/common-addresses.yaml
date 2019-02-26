@@ -37,7 +37,8 @@ data:
           - 172.29.14.3
   dns:
     # Kubernetes cluster domain. Do not change. This is internal to the cluster.
-    cluster_domain: cluster.local
+    cluster_domain: newak.lab.akraino.org
+   # node_domain: cluster.local
     # DNS service ip
     service_ip: 10.96.0.10
     # List of upstream DNS forwards. Verify you can reach them from your
