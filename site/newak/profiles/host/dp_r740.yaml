@@ -27,12 +27,12 @@ metadata:
         name: ipmi_admin_password
         path: .
 data:
-  hardware_profile: DELL_HP_Generic
   oob:
     type: 'ipmi'
     network: 'oob'
     account: 'root'
   primary_network: 'oam'
+  hardware_profile: DELL_HP_Generic
   interfaces:
     pxe:
       device_link: pxe
