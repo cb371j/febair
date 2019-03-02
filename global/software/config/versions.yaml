@@ -14,17 +14,17 @@ data:
         type: git
       calico:
         calico:
-          #location: https://git.openstack.org/openstack/openstack-helm-infra
-          #reference: 7387ecd71c46ecbc000ab431b5e16387d3ba1e04
-          location: https://git/cb371j/osh-infra
-          reference: c87a940c52ed7e5a61d6fec72fef07f3e096df30
+          location: https://git.openstack.org/openstack/openstack-helm-infra
+          reference: 7387ecd71c46ecbc000ab431b5e16387d3ba1e04
+          #location: https://git/cb371j/osh-infra
+          #reference: c87a940c52ed7e5a61d6fec72fef07f3e096df30
           subpath: calico
           type: git
         calico-htk:
-          #location: https://git.openstack.org/openstack/openstack-helm-infra
-          #reference: 7387ecd71c46ecbc000ab431b5e16387d3ba1e04
-          location: https://git/cb371j/osh-infra
-          reference: c87a940c52ed7e5a61d6fec72fef07f3e096df30
+          location: https://git.openstack.org/openstack/openstack-helm-infra
+          reference: 7387ecd71c46ecbc000ab431b5e16387d3ba1e04
+          #location: https://git/cb371j/osh-infra
+          #reference: c87a940c52ed7e5a61d6fec72fef07f3e096df30
           subpath: helm-toolkit
           type: git
         etcd:
