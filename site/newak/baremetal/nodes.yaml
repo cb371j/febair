@@ -175,11 +175,11 @@ data:
       address: 172.29.14.108
   # NEWSITE-CHANGEME: The next node's host profile
   # This is the third "primary" control plane profile after genesis
-  host_profile: dp_r740
+  host_profile: cp_r741-primary
   metadata:
     # NEWSITE-CHANGEME: The next node's rack designation
     rack: RACK01
     # NEWSITE-CHANGEME: The next node's role desigatnion
     tags:
-      - 'workers'
+      - 'masters'
 ...
