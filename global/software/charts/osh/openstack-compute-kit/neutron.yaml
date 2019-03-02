@@ -185,8 +185,7 @@ metadata:
       dest:
         path: .values.network.auto_bridge_add.br-ex
         pattern: 'EXTERNAL_INTERFACE'
-
-data:
+  #external_iface
   chart_name: neutron
   release: neutron
   namespace: openstack
@@ -235,9 +234,12 @@ data:
         node_selector_value: enabled
     network:
       auto_bridge_add:
-        br-ex: 'EXTERNAL_INTERFACE'
+        #br-ex: 'EXTERNAL_INTERFACE'
+        br-ex: 'bond0'
+        #tunnel_device
       interface:
         tunnel: 'TUNNEL_DEVICE'
+        #tunnel:  'bond0.45'
     conf:
       logging:
         loggers:
@@ -323,6 +325,13 @@ data:
             tenant_network_types: vxlan
           ml2_type_vlan:
             network_vlan_ranges: external
+#######REMOVED#########
+       # openvswitch_agent:
+       #   agent:
+       #     tunnel_types: vxlan
+       #   ovs:
+       #     bridge_mappings: bond0:br-bond0
+########################################
   dependencies:
     - osh-helm-toolkit
 ...
