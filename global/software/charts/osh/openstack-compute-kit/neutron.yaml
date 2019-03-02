@@ -185,7 +185,6 @@ metadata:
       dest:
         path: .values.network.auto_bridge_add.br-ex
         pattern: 'EXTERNAL_INTERFACE'
-  #external_iface
   chart_name: neutron
   release: neutron
   namespace: openstack
@@ -235,7 +234,7 @@ metadata:
     network:
       auto_bridge_add:
         #br-ex: 'EXTERNAL_INTERFACE'
-        br-ex: 'bond0'
+        br-ex: bond0
         #tunnel_device
       interface:
         tunnel: 'TUNNEL_DEVICE'
