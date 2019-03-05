@@ -27,14 +27,14 @@ data:
       service_ip: 10.96.232.136
 
     ip_rule:
-      gateway: 172.29.14.1
+      gateway: 172.29.10.1
     bgp:
       ipv4:
-        public_service_cidr: 172.29.9.160/29
-        ingress_vip: 172.29.9.161/32
+        public_service_cidr: 172.29.9.136/29
+        ingress_vip: 172.29.9.137/32
         peers:
-          - 172.29.14.2
-          - 172.29.14.3
+          - 172.29.10.2
+          - 172.29.10.3
   dns:
     # Kubernetes cluster domain. Do not change. This is internal to the cluster.
     #cluster_domain: newak.lab.akraino.org
@@ -53,7 +53,7 @@ data:
     # NEWSITE-CHANGEME: FQDN for ingress (i.e. "publicly facing" access point)
     # Choose FQDN according to the ingress/public FQDN naming conventions at
     # the top of this document.
-    ingress_domain: newak.lab.akraino.org
+    ingress_domain: azak2.lab.akraino.org
 
   genesis:
     # NEWSITE-CHANGEME: Update with the hostname for the node which will take on
@@ -61,15 +61,15 @@ data:
     # networks/physical/networks.yaml
     # NOTE: Ensure that the genesis node is manually configured with this
     # hostname before running `genesis.sh` on the node.
-    hostname: aknode105
+    hostname: aknode53
     # NEWSITE-CHANGEME: Calico IP of the Genesis node. Use the "start" value for
     # the calico network defined in networks/physical/networks.yaml for this IP.
-    ip: 172.29.14.105
+    ip: 172.29.10.53
 
   bootstrap:
     # NEWSITE-CHANGEME: Update with the "start" value/IP of the static range
     # defined for the pxe network in networks/physical/networks.yaml
-    ip: 172.30.14.105
+    ip: 172.30.9.53
 
   kubernetes:
     # K8s API service IP
@@ -77,7 +77,7 @@ data:
     # etcd service IP
     etcd_service_ip: 10.96.0.2
     # k8s pod CIDR (network which pod traffic will traverse)
-    pod_cidr: 10.99.0.0/16
+    pod_cidr: 10.98.0.0/16
     # k8s service CIDR (network which k8s API traffic will traverse)
     service_cidr: 10.96.0.0/16
     # misc k8s port settings
@@ -94,9 +94,8 @@ data:
   # control plane servers. Ensure that this matches the nodes with the 'masters'
   # tags applied in baremetal/nodes.yaml
   masters:
-    - hostname: aknode106
-    - hostname: aknode107
-    - hostname: aknode108
+    - hostname: aknode54
+    - hostname: aknode55
 
   # NEWSITE-CHANGEME: Environment proxy information.
   # NOTE: Reference Airship sites do not deploy behind a proxy, so this proxy section
@@ -146,8 +145,8 @@ data:
     ceph:
       # NEWSITE-CHANGEME: CIDRs for Ceph. Update to match the network CIDR
       # used for the `storage` network in networks/physical/networks.yaml
-      public_cidr: '172.31.14.0/24'
-      cluster_cidr: '172.31.14.0/24'
+      public_cidr: '172.31.10.0/24'
+      cluster_cidr: '172.31.10.0/24'
 
   neutron:
     # NEWSITE-CHANGEME: Overlay network for VM traffic. Ensure the bond name and
