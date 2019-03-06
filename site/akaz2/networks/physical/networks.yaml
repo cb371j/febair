@@ -85,20 +85,20 @@ metadata:
     layer: site
   storagePolicy: cleartext
 data:
-  cidr: 172.30.14.0/24
+  cidr: 172.30.9.0/24
   routes:
   - subnet: '0.0.0.0/0'
     gateway: 172.30.9.53
   ranges:
   - type: reserved
-    start: 172.30.14.2
-    end: 172.30.14.10
+    start: 172.30.9.2
+    end: 172.30.9.10
   - type: static
-    start: 172.30.14.11
-    end: 172.30.14.200
+    start: 172.30.9.11
+    end: 172.30.9.200
   - type: dhcp
-    start: 172.30.14.201
-    end: 172.30.14.254
+    start: 172.30.9.201
+    end: 172.30.9.254
   dns:
     domain: akaz2.lab.akraino.org
     servers: '172.28.9.74 172.28.9.75 8.8.8.8'
