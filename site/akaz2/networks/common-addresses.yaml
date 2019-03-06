@@ -79,7 +79,7 @@ data:
     # k8s pod CIDR (network which pod traffic will traverse)
     pod_cidr: 10.98.0.0/16
     # k8s service CIDR (network which k8s API traffic will traverse)
-    service_cidr: 10.96.0.0/16
+    service_cidr: 10.96.0.0/15
     # misc k8s port settings
     apiserver_port: 6443
     haproxy_port: 6553
