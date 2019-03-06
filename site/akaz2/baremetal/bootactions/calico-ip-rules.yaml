@@ -58,9 +58,10 @@ data:
 
         [Service]
         Type=simple
-        ExecStart=/opt/configure-ip-rules.sh -g DH_SUB_GATEWAY_IP -c DH_SUB_POD_CIDR -s DH_SUB_INGRESS_CIDR
+        #ExecStart=/opt/configure-ip-rules.sh -g DH_SUB_GATEWAY_IP -c DH_SUB_POD_CIDR -s DH_SUB_INGRESS_CIDR
+        ExecStart=/opt/configure-ip-rules.sh -g 172.29.10.1 -c 10.98.0.0/16 -s 172.29.9.136/29
 
-        [Install]
+        [Install
         WantedBy=multi-user.target
       data_pipeline:
         - utf8_decode
