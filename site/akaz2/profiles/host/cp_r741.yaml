@@ -44,8 +44,8 @@ data:
     bond0:
       device_link: bond0
       slaves:
-        - 'enp94s0f0'
-        - 'enp94s0f1'
+        - 'enp95s0f0'
+        - 'enp95s0f1'
       networks:
         - 'oam'
         - 'storage'
